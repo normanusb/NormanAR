@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject go = Instantiate(bulletPrefab,spawnObject.position,transform.rotation) as GameObject;
-            go.GetComponent<Rigidbody>().AddForce(transform.forward * 30,ForceMode.Impulse);
+            go.GetComponent<Rigidbody>().AddForce(transform.forward * 30,ForceMode.VelocityChange);
         }
 	}
 }
